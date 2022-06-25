@@ -1,9 +1,8 @@
 #!/bin/python3
-
-#coded by U4I5 For my pentesting
+#coded by U4I5 For pentesting
 import os
-#import nmap as n
-
+import nmap3 
+n3 = nmap3.Nmap()
 #Target Ip address
 Iptarget = input('[+] Target: ')
 #Interface
@@ -14,7 +13,7 @@ if Iface == 0:
 
 kali = os.system
 #1- fast Scan nmap
-kali(nmap + "-sV" + "-sC" + "T4" + Iptarget)
+kali(n3 + "-sV" + "-sC" + "T4" + Iptarget)
 
 #2- Full Scan nmap  
-kali(nmap + "-p-" "-sV" + "-sC" + "T4" + Iptarget + "-oN" + Iptarget.txt)
+kali(n3 + "-p-" "-sV" + "-sC" + "T4" + Iptarget + "-oN" + Iptarget.txt)
